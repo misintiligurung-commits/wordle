@@ -1,0 +1,6 @@
+export const WORDS = [
+  "APPLE", "BRAIN", "CHAIR", "DREAM", "EARTH", "FLAME", "GRAPE", "HOUSE",
+  "IMAGE", "JOLLY", "KNIFE", "LEMON", "MOUSE", "NIGHT", "OCEAN", "PLANT",
+  "QUEEN", "RIVER", "SMILE", "TIGER", "UNITY", "VOICE", "WATER", "YOUTH",
+  "ZEBRA", "CLOUD", "STONE", "BREAD", "LIGHT", "SPORT"
+];

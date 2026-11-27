@@ -1,0 +1,79 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+h1 { margin: 8px 0; letter-spacing: 2px; }
+
+.message { height: 24px; margin: 4px 0 8px; color: #f5c542; }
+
+/* Board and tiles */
+.board { display: grid; gap: 5px; margin-bottom: 20px; }
+.row { display: grid; grid-template-columns: repeat(5, 58px); gap: 5px; }
+
+.tile {
+  width: 58px;
+  height: 58px;
+  border: 2px solid #3a3a3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+.tile.filled  { border-color: #818384; }
+.tile.correct { background: #538d4e; border-color: #538d4e; }
+.tile.present { background: #b59f3b; border-color: #b59f3b; }
+.tile.absent  { background: #3a3a3c; border-color: #3a3a3c; }
+
+/* Keyboard */
+.keyboard { display: flex; flex-direction: column; gap: 6px; }
+.keyboard-row { display: flex; justify-content: center; gap: 5px; }
+
+.key {
+  min-width: 36px;
+  height: 52px;
+  border: none;
+  border-radius: 4px;
+  background: #818384;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.key.wide    { min-width: 62px; }
+.key.correct { background: #538d4e; }
+.key.present { background: #b59f3b; }
+.key.absent  { background: #3a3a3c; }
+
+/* Game over modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  background: #1f1f20;
+  padding: 28px 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+.modal .answer { letter-spacing: 4px; color: #538d4e; font-size: 1.8rem; }
+.modal button {
+  margin-top: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 420px) {
+  .row { grid-template-columns: repeat(5, 50px); }
+  .tile { width: 50px; height: 50px; font-size: 1.6rem; }
+  .key { min-width: 28px; }
+  .key.wide { min-width: 50px; }
+}
